@@ -1,16 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module'; // CLI imports AppRoutingModule
 import { AppComponent } from './app.component';
+import { WeatherConditionItemComponent } from './main/weather-condition-item/weather-condition-item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MainComponent } from './main/main.component';
+import { ZipcodeSearchComponent } from './main/zipcode-search/zipcode-search.component';
+import { WeatherConditionsListComponent } from './main/weather-conditions-list/weather-conditions-list.component';
+import { ForecastComponent } from './forecast/forecast.component';
 
 @NgModule({
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   declarations: [
-    AppComponent
+    AppComponent,
+    ZipcodeSearchComponent,
+    WeatherConditionsListComponent,
+    WeatherConditionItemComponent,
+    MainComponent,
+    ForecastComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
