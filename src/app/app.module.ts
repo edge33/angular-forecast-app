@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { ZipcodeSearchComponent } from './main/zipcode-search/zipcode-search.component';
 import { WeatherConditionsListComponent } from './main/weather-conditions-list/weather-conditions-list.component';
 import { ForecastComponent } from './forecast/forecast.component';
+import { NameBarComponent } from './main/name-bar/name-bar.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
@@ -19,6 +20,7 @@ import { ForecastComponent } from './forecast/forecast.component';
     WeatherConditionItemComponent,
     MainComponent,
     ForecastComponent,
+    NameBarComponent,
   ],
   bootstrap: [AppComponent],
 })

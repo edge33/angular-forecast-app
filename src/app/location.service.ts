@@ -18,7 +18,7 @@ export class LocationService {
   }
 
   loadStoredLocations(): void {
-    this.locations = JSON.parse(localStorage.getItem('locations'));
+    this.locations = JSON.parse(localStorage.getItem('locations')) || [];
     this.locationsSubject.next(this.locations);
   }
 

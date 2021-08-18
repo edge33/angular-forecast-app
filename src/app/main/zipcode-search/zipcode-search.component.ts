@@ -17,6 +17,7 @@ export class ZipcodeSearchComponent implements OnInit {
   onAddLocationClick(): void {
     if (this.name.length > 0) {
       this.locationService.storeLocation(this.name);
+      this.name = '';
     }
   }
 }
